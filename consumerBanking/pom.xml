@@ -44,6 +44,8 @@
 
   <!-- 打包配置 -->
   <build>
+    <!-- 解决打包依赖问题 -->
+    <!-- 可以打flat包 -->
     <finalName>my-project-name</finalName>
     <plugins>
 
@@ -80,6 +82,8 @@
 
         </plugin>
 
+
+        <!-- 解决jar包中没有主清单属性的问题 -->
         <plugin>
           <groupId>org.springframework.boot</groupId>
          <artifactId>spring-boot-maven-plugin</artifactId>
