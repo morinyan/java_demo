@@ -1,5 +1,4 @@
 # java_demo
-java demo
 
 ### #安装Java和Maven
 1. https://www.oracle.com/java/technologies/downloads/
