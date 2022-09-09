@@ -18,8 +18,11 @@ mvn archetype:generate "-DgroupId=com.companyname.bank" "-DartifactId=consumerBa
 ### #使用第三方依赖
 ```xml
 <!-- 在pom.xml文件中配置dependency -->
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  
+  <!-- 项目描述 -->
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.companyname.bank</groupId>
   <artifactId>consumerBanking</artifactId>
@@ -56,9 +59,11 @@ mvn archetype:generate "-DgroupId=com.companyname.bank" "-DartifactId=consumerBa
   
   <!-- 项目编码 -->
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+    <!-- <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> -->
+    <!-- <maven.compiler.encoding>UTF-8</maven.compiler.encoding> -->
     <java.version>11</java.version>
+    
+    <!-- 打包报错 -->
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
   </properties>
@@ -104,6 +109,8 @@ mvn archetype:generate "-DgroupId=com.companyname.bank" "-DartifactId=consumerBa
         <plugin>
           <groupId>org.springframework.boot</groupId>
          <artifactId>spring-boot-maven-plugin</artifactId>
+         
+         <!-- 解决运行时找不到依赖 -->
          <executions>
               <execution>
                 <goals>
